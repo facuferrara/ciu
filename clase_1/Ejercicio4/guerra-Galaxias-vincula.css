@@ -1,0 +1,26 @@
+.lider{
+    background-color: red;
+  }
+.liderRebelde{
+    background-color: blue;
+  }
+.id-Dart-Vader{
+    background-color: red;
+    font-size: 28px;
+}
+.id-Luke{
+    /* font-size: 28px; */
+    font-style: italic;
+}
+.soldado{
+    background-color: blue;
+    border: 5px solid black;
+    letter-spacing: 3px;
+}
+.apoyo{
+    text-align: center;
+}
+.nave{
+    background-color: blue;
+    text-transform: uppercase;
+}
