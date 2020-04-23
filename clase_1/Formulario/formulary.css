@@ -1,0 +1,20 @@
+.body{
+    background-color: lightblue;
+}
+:placeholder-shown {
+    /* Se aplica al input
+       cuando el texto del placeholder
+       se está mostrando */
+    background-color: grey;
+}
+::placeholder {
+    /* Se aplica específicamente
+       al texto del placeholder */
+    color: blue;
+}
+input {
+    background-color: #fff;
+}
+::placeholder {
+    color: #555;
+}
