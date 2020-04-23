@@ -1,8 +1,4 @@
-
 :placeholder-shown {
-    /* Se aplica al input
-       cuando el texto del placeholder
-       se está mostrando */
     background-color: grey;
 }
 ::placeholder {
@@ -12,13 +8,3 @@
 ::placeholder {
     color: #555;
 }
-<script>
-  function mostrarContrasena(){
-      var tipo = document.getElementById("password");
-      if(tipo.type == "password"){
-          tipo.type = "text";
-      }else{
-          tipo.type = "password";
-      }
-  }
-</script>

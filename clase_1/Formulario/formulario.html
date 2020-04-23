@@ -12,7 +12,7 @@
    collares, alimentos y mas cosas.
 </p>    
 <br>
-<form action="/my-handling-form-page" method="post">
+<form id="contactform" action="//formspree.io/facuferrara@hotmail.com" method="POST">
     <ul>
      <li>
        <label for="name">Nombre de su mascota:</label>
@@ -28,9 +28,10 @@
      <br>
 
      <li>
-      <form method="POST">
+
         <label>Contraseña:</label>
-        <input class="form-control" type="password" name="password" id="password">
+        <input class="form-control" type="password" name="password" id="password"
+        placeholder="*******">>
         <div class="form-row">
             <div class="col">
         </div>
@@ -38,32 +39,37 @@
           <button class="btn btn-primary" type="button" onclick="mostrarContrasena()">Mostrar Contraseña</button>
         </div>
           </div>
-        </form> 
-      <br>
+          <br>
+          
+          <li>
+              <label for="Edad">Edad de su mascota:</label>
+              <input type="number" id="tentacles" name="tentacles" placeholder="123-45-6789"
+              min="0" max="100">
+            </li>
+            <br>
+            
+            <li>
+                <label for="msg">Mensaje:<br></label>
+                <textarea id="msg" name="user_message"></textarea>
+            </li>
+      <img src="https://lh3.googleusercontent.com/proxy/el6uH6aqMVHZmDUgseJtPWKt832EhMRVAUweNUGAwtj5dSQD4RXMDFBAnVOtD_Kk3bLERFgqF97Pi3HoFuew9SrGwm5WgrGV72LTyTCNrsngYOL0kh31CzK2GPLPKvIqDJ14yLBnsVWuecmKPL-W" 
+      alt="" /><br><br>
+            <br>
+            <li>
+                <label>Color de su mascota: </label>
+                <input type="color">
+                <canvas id="miCanvas" width="300" height="200">:(</canvas>
+            </li>
+            <br>
+            <li>
+            
+            <input type="submit" value="Enviar">
+            </li>
+        </ul>
+    <script>
+        var contactform =  document.getElementById('contactform');
+        contactform.setAttribute('action', '//formspree.io/' + 'your' + '@' + 'email' + '.' + 'com');
 
-     <li>
-        <label for="Edad">Edad de su mascota:</label>
-        <input type="number" id="tentacles" name="tentacles" placeholder="123-45-6789"
-            min="0" max="100">
-     </li>
-     <br>
-     
-     <li>
-       <label for="msg">Mensaje:<br></label>
-       <textarea id="msg" name="user_message"></textarea>
-     </li>
-
-     <br>
-        <li>
-        <label>Color de su mascota: </label>
-        <input type="color">
-        </li>
-      
-      <canvas id="miCanvas" width="300" height="200">:(</canvas>
-
-    </ul>
-   </form>
-   <script>
     function mostrarContrasena(){
         var tipo = document.getElementById("password");
         if(tipo.type == "password"){
@@ -73,4 +79,5 @@
         }
     }
   </script>
+</form> 
 </body>
