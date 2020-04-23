@@ -28,10 +28,17 @@
      <br>
 
      <li>
-        <label for="pasword">Contraseña:</label>
-        <input type="contraseña" id="contraseña" name="pasword"
-        placeholder="*******">
-      </li>
+      <form method="POST">
+        <label>Contraseña:</label>
+        <input class="form-control" type="password" name="password" id="password">
+        <div class="form-row">
+            <div class="col">
+        </div>
+            <div class="col">
+          <button class="btn btn-primary" type="button" onclick="mostrarContrasena()">Mostrar Contraseña</button>
+        </div>
+          </div>
+        </form> 
       <br>
 
      <li>
@@ -56,4 +63,14 @@
 
     </ul>
    </form>
+   <script>
+    function mostrarContrasena(){
+        var tipo = document.getElementById("password");
+        if(tipo.type == "password"){
+            tipo.type = "text";
+        }else{
+            tipo.type = "password";
+        }
+    }
+  </script>
 </body>
