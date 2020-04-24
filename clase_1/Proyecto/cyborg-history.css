@@ -1,0 +1,25 @@
+.conFondo {
+  background-image:  url("https://cdnb.artstation.com/p/assets/images/images/000/316/775/large/aadi-salman-cyborgninja.jpg?1416797159"), 
+                     url("https://cdnb.artstation.com/p/assets/images/images/000/316/775/large/aadi-salman-cyborgninja.jpg?1416797159");
+  background-size: 100%;
+  background-attachment: fixed;
+  background-color: transparent;
+}
+.centrado{
+    margin:10px auto;
+    display:block;
+}
+.centrado{
+    margin-left: auto;
+    margin-right: auto;
+  }
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }  
+.texto{
+    margin:10px auto;
+    display:block;
+    background-color: darkgray;
+}
