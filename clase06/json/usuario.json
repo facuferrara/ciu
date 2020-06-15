@@ -1,0 +1,10 @@
+{
+  "Usuarios": [
+      {
+          "Avatar": "https://cdn.ciudad.com.ar/sites/default/files/styles/nota_portada_crop/public/nota/portada/2020/03/09/ricky.jpg?itok=Q35_GimG",
+          "Nombre": "Ricardo",
+          "Estado": true
+      }
+      
+  ]
+}

@@ -1,8 +1,12 @@
 // import saludar from ("./index.js");
 // falta ver si validar usuario concreto
 const botonLogear = document.getElementById("BotonLogear");
+const botonCrearNuevo = document.getElementById("BotonCrearNuevo");
+// const usuariosLogin = [
+//     ['30337591','dario83']
+// ];
 const usuariosLogin = [
-    ['30337591','dario83']
+    ['41327455','facundo98']
 ];
 let elementosAagregar = [
     "<div id='elementoMenu0' class='menu-fondo'>esto es del menu</div>",
@@ -13,11 +17,20 @@ let elementosAagregar = [
     "<input id='elementoMenu5' class='ingresoDeContraseña' type='password' name='contraseña' id='contraseña'>",
     "<p id='elementoMenu8' class='loginResultado'></p>",
     "<div id='elementoMenu6' class='BotonAceptar'></div>",
-    "<div id='elementoMenu7' class='ACEPTAR'>ACEPTAR</div></div>"
+    "<div id='elementoMenu7' class='ACEPTAR'>ACEPTAR</div></div>",
+    "<div id='elementoMenu9' class='BotonCrearNuevo'>Crear Nuevo </div>",
     
 ];
 
+
+
 botonLogear.addEventListener("click",async function(){
+    await agregarAlFinal("ultimo","elementoMenu0",elementosAagregar);
+    document.getElementById("elementoMenu0").addEventListener("click",async function(){
+        await removerAgregados("elementoMenu0",elementosAagregar);
+    })
+})
+botonCrearNuevo.addEventListener("click", async function(){
     await agregarAlFinal("ultimo","elementoMenu0",elementosAagregar);
     document.getElementById("elementoMenu0").addEventListener("click",async function(){
         await removerAgregados("elementoMenu0",elementosAagregar);
@@ -35,6 +48,12 @@ async function agregarAlFinal(itemAnterior,itemEventoSalir, items){
     document.getElementById("elementoMenu7").addEventListener("click", function(){
         console.log("se apreto el boton aceptar");
         validarUsuarioCont();
+    })
+    document.getElementById("elementoMenu9").addEventListener("click", function(){
+        console.log("se apreto el boton crear nuevo");
+        // validarUsuarioCont();
+        redirigirACrearUsuario();
+
     })
 }
 
@@ -113,6 +132,37 @@ function validarUsuarioCont(){
         return false;
     }
 }
+function redirigirACrearUsuario(){
+    // console.log("validando usuario y contraseña")
+    let usuario = document.getElementById("elementoMenu4");
+    let cont = document.getElementById("elementoMenu5");
+    let usuarioValido = validarUsuario(usuario);
+    let contValida = validarContraseña(cont);
+    // if(usuarioValido && contValida){
+    //     console.log("usuario : ("+usuario.value+")y contraseña : ("+cont.value+") valido")
+        //borra los objetos de mas
+        removerAgregados("index0",[]);
+        removerAgregados("index1",[]);
+        removerAgregados("index2",[]);
+        removerAgregados("BotonLogear",[]);
+        removerAgregados("elementoMenu0",elementosAagregar);
+        //llamada a la otra pantalla
+        try{
+            // document.getElementById("rectangulo-superior-flotante").remove();
+            document.getElementById("contenedor-parrafo-bienvenida").remove();
+        }catch(err){
+            console.log("no se pudo eliminar algo->"+err);
+        }
+        //cargar_MisSolicitudes();
+        cargar_listadoDeUsuarios();
+        return true;
+    // }else{
+        // console.log("usuario : ("+usuario.value+")y contraseña : ("+cont.value+") no valido")
+        cargar_MisSolicitudes(); //no quiero que carge mis solicitudes sino el listado de usuarios..
+        //cargar_listadoDeUsuarios();
+        return false;
+    }
+// }
 
 function mostrarResultado(txt){
     console.log(txt)

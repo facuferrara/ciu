@@ -123,6 +123,28 @@
     text-align: center;
     color: #FFFFFF;
 }
+/* BotonCrearNuevo */
+
+.BotonCrearNuevo{
+
+    position: absolute;
+    width: 326px;
+    height: 25px;
+    left: 50%;
+    margin-left: -163px;
+    top: 570px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 42px;
+    text-align: center;
+    text-decoration-line: underline;
+    
+    color: #FFFFFF;
+}
+
 
 
 /* \\\\\\ ----> LA VERSION MOVIL ESTA DISEÑADA PARA UNA RESOLUCION DE 320 X 620  PX   <----////////     */

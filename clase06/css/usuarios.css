@@ -1,0 +1,103 @@
+.contenedorDeUsuarios{
+  position: absolute;
+  width: 97%;
+  height: 450px;
+  left: 18;
+  top: 281px;
+  background: rgba(255, 255, 255, 0.75);
+  display : inherit;
+}
+
+.listaUsers{
+  position: relative;
+  width: 1360px;
+  height: 45px;
+  left: 20px;
+  top: 20px;
+  background: rgba(6, 202, 32, 0.2);
+  
+}
+
+.tablaUsers{
+  position: relative;
+  left: 20px;
+  top:20px;
+  width: 95%; 
+  background-color: rgba(0, 38, 255, 0.685);
+}
+.table ,tr{
+  height: 45px;
+}
+
+.colAvatar{
+  width: 15%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.colNombre{
+  width: 60%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.colEstadoU{
+  width: 20%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.colChecks{
+  width: 5%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.checks{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  left: 5px;
+  top: auto;
+}
+
+
+.menuUser{
+
+  position: absolute;
+  width: 64px;
+  height: 40px;
+  left: 253px;
+  top: 49px;
+}
+.texto-solicituds{
+      position: absolute;
+      width: 126px;
+      height: 20px;
+      right: 35px;
+      top: 80px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      color: #FFFFFF;
+
+}
