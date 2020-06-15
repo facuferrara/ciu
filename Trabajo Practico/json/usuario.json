@@ -1,0 +1,12 @@
+{
+  "Usuarios": [
+      {
+
+          "Avatar": "../img/fantino.jpg",
+          "Nombre": "Ricardo",
+          "EstadoU": "activo"
+          
+      }
+      
+  ]
+}

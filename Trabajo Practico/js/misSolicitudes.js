@@ -18,6 +18,7 @@ let nodosMisSolicitudes = [
                 "</tr>"+
             "</table></div>"
 ];
+
 let misSolicitudesInicial = document.getElementById("ultimo");
 let tabla;
 let checkAll ;
