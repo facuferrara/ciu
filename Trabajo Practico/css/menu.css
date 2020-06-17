@@ -38,6 +38,24 @@
     text-align: center;
     color: #FFFFFF;
 }
+.botonNuevoUser{
+    position: absolute;
+    width: 15%;
+    height: 40px;
+    left: 255px;
+    top: 190px;
+    background: #519856;
+    /* border: 2px solid #CB1DC4; */
+    box-sizing: border-box;
+    /* border-radius: 0px 20px; */
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    color: #FFFFFF;
+}
 
 
 .botonModificar{
@@ -59,6 +77,24 @@
     color: #FFFFFF;
 }
 
+.botonModificarUser{
+    position: absolute;
+    width: 15%;
+    height: 40px;
+    left: 489px;
+    top: 190px;
+    background: #519856;
+    /* border: 2px solid #CB1DC4; */
+    box-sizing: border-box;
+    /* border-radius: 0px 20px; */
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
 .botonEliminar{
     position: absolute;
     width: 15%;
@@ -100,6 +136,7 @@
 
 /* \\\\\\ ----> LA VERSION MOVIL ESTA DISEÑADA PARA UNA RESOLUCION DE 320 X 579  PX   <----////////     */
 
+
 @media all and (max-device-width: 480px){
 
     .botonMenu{
@@ -133,6 +170,24 @@
         text-align: center;
         color: #FFFFFF;
     }
+    .botonNuevoUser{
+        position: absolute;
+        width: 33%; 
+        height: 50px;
+        left: 215px;
+        top: 310px;
+        background: #519856;
+        /* border: 2px solid #CB1DC4; */
+        box-sizing: border-box;
+        /* border-radius: 0px 20px; */
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+    }
     
     
     .botonModificar{
@@ -153,12 +208,29 @@
         text-align: center;
         color: #FFFFFF;
     }
-    
+    .botonModificarUser{
+        position: absolute;
+        width: 33%; 
+        height: 50px;
+        left: 215px;
+        top: 360px;
+        background: #519856;
+        /* border: 2px solid #CB1DC4; */
+        box-sizing: border-box;
+        /* border-radius: 0px 20px; */
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+    }
     .botonEliminar{ 
         position: absolute;
-        width: 32%; 
+        width: 33%; 
         height: 50px;
-        left: 217px;
+        left: 215px;
         top: 210px;
         background: #519856;
         /* border: 2px solid #CB1DC4; */
@@ -175,9 +247,9 @@
     
     .botonSalir{
         position: absolute;
-        width: 32%;
+        width: 33%;
         height: 50px;
-        left: 217px;
+        left: 215px;
         top: 260px;
         /* margin-top: 1%; */
         background: #519856;

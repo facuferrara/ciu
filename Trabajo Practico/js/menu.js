@@ -7,7 +7,10 @@ let BOTONES_mis_solicitudes=[
 "<div id='btnMenu2a' class='botonNuevo'>NUEVO</div>",
 "<div id='btnMenu3a' class='botonModificar'>MODIFICAR</div>",
 "<div id='btnMenu4a' class='botonEliminar'>ELIMINAR</div>",
-"<div id='btnMenu5a' class='botonSalir'>SALIR</div>"];
+"<div id='btnMenu5a' class='botonSalir'>SALIR</div>",
+"<div id='btnMenu6a' class='botonNuevoUser'>Nuevo Usuario</div>",
+"<div id='btnMenu7a' class='botonModificarUser'>Modificar Usuario</div>"];
+
 
 let BOTONES_solicitud = [
     "<div id='btnMenu2a' class='botonNuevo'>NUEVO</div>",
@@ -45,12 +48,19 @@ async function dibujarBotones(){
         await inicial.insertAdjacentHTML("beforeEnd",item);
     })
     document.getElementById("btnMenu2a").addEventListener("click",async function(){
+        await CARGAR_PANTALLA_NUEVO();
+        // await CARGAR_PANTALLA_NUEVOUSER();
+        // await dibujarPantallaNuevo();
+        await dibujarMenuMS();
+    });
+    document.getElementById("btnMenu6a").addEventListener("click",async function(){
         // await CARGAR_PANTALLA_NUEVO();
         await CARGAR_PANTALLA_NUEVOUSER();
         // await dibujarPantallaNuevo();
         await dibujarMenuMS();
     });
     document.getElementById("btnMenu3a").addEventListener("click",CARGAR_PANTALLA_MODIFICAR);
+    document.getElementById("btnMenu7a").addEventListener("click",CARGAR_PANTALLA_MODIFICAR);
     document.getElementById("btnMenu4a").addEventListener("click",DB_borrar_seleccionados)
     document.getElementById("btnMenu5a").addEventListener("click",async function(){
         CARGAR_INDEX();

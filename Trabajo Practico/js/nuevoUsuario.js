@@ -1,5 +1,5 @@
-let PANTALLA_NUEVO = false;
-let htmlPantallaNuevo = ["<div id='NUEVA-RECTANGULO-FONDO' class='NUEVA-RECTANGULO-FONDO'>"+
+let PANTALLA_NUEVO1 = false;
+let htmlPantallaNuevo1 = ["<div id='NUEVA-RECTANGULO-FONDO' class='NUEVA-RECTANGULO-FONDO'>"+
 "<P id='NUEVA-TXT-TITULO' class='NUEVA-TXT-TITULO'>NUEVO USUARIO</P>"+
 // "<P  id='NUEVA-TXT-FECHA' class='NUEVA-TXT-FECHA' required>FECHA:</P>"+
 // "<INPUT type='date'  id='NUEVA-INPUT-FECHA' class='NUEVA-INPUT-FECHA' > </INPUT>"+
@@ -27,7 +27,7 @@ function dibujarPantallaNuevoU(){
     const inicial = document.getElementById("ultimo").parentNode;
 
     console.log("dibujando pantalla nuevo");
-    htmlPantallaNuevo.forEach(async function(item){
+    htmlPantallaNuevo1.forEach(async function(item){
         console.log("agregando items de pantalla nuevo");
         await inicial.insertAdjacentHTML("beforeEnd",item);
     })
@@ -56,8 +56,8 @@ function EVENTOS_PANTALLA_NUEVOU(){
         }else{
             await DB_agregar_item("nuevo",avatar,nombre,estadou);
             await BORRAR_PANTALLA_NUEVO();
-            let ultimoItem = listaDeSolicitudes.length;
-            agregarAlista(ultimoItem,fecha,desc,estado);
+            let ultimoItem = listaDeUsuarios.length;
+            agregarAlista(ultimoItem,avatar,nombre,estadou);
             await TABLA_recargar_lista();
         }
 
