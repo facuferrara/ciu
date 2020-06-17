@@ -1,8 +1,8 @@
 {
   "Usuarios": [
       {
-
-          "Avatar": "../img/fantino.jpg",
+ 
+          "Avatar": "../img/gravatar.png",
           "Nombre": "Ricardo",
           "EstadoU": "activo"
           

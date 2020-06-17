@@ -45,7 +45,8 @@ async function dibujarBotones(){
         await inicial.insertAdjacentHTML("beforeEnd",item);
     })
     document.getElementById("btnMenu2a").addEventListener("click",async function(){
-        await CARGAR_PANTALLA_NUEVO();
+        // await CARGAR_PANTALLA_NUEVO();
+        await CARGAR_PANTALLA_NUEVOUSER();
         // await dibujarPantallaNuevo();
         await dibujarMenuMS();
     });

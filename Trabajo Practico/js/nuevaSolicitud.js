@@ -1,27 +1,28 @@
 let PANTALLA_NUEVO = false;
 let htmlPantallaNuevo = ["<div id='NUEVA-RECTANGULO-FONDO' class='NUEVA-RECTANGULO-FONDO'>"+
-"<P id='NUEVA-TXT-TITULO' class='NUEVA-TXT-TITULO'>NUEVA SOLICITUD</P>"+
-"<P  id='NUEVA-TXT-FECHA' class='NUEVA-TXT-FECHA' required>FECHA:</P>"+
-"<INPUT type='date'  id='NUEVA-INPUT-FECHA' class='NUEVA-INPUT-FECHA' > </INPUT>"+
-"<P  id='NUEVA-TXT-DESCRIPCION' class='NUEVA-TXT-DESCRIPCION'>DESCRIPCÍON:</P>"+
+"<P id='NUEVA-TXT-TITULO' class='NUEVA-TXT-TITULO'>NUEVO USUARIO</P>"+
+// "<P  id='NUEVA-TXT-FECHA' class='NUEVA-TXT-FECHA' required>FECHA:</P>"+
+// "<INPUT type='date'  id='NUEVA-INPUT-FECHA' class='NUEVA-INPUT-FECHA' > </INPUT>"+
+"<P  id='NUEVA-TXT-AVATAR' class='NUEVA-TXT-FECHA'>AVATAR:</P>"+"<textarea  id='NUEVA-TXTTAREA2-DESCRIPCION' class='NUEVA-TXTTAREA2-DESCRIPCION' cols='30' rows='9' maxlength='100'  required></textarea>"+
+"<P  id='NUEVA-TXT-DESCRIPCION' class='NUEVA-TXT-DESCRIPCION'>NOMBRE:</P>"+
 "<textarea  id='NUEVA-TXTTAREA-DESCRIPCION' class='NUEVA-TXTTAREA-DESCRIPCION' cols='30' rows='10' maxlength='100' required></textarea>"+
 "<p  id='NUEVA-TXT-ESTADO' class='NUEVA-TXT-ESTADO'>ESTADO:</p>"+
 "<select  id='NUEVA-INPUTLIST-ESTADO' class='NUEVA-INPUTLIST-ESTADO' required>"+
-"    <option value='Abierta'>Abierta</option>"+
-"    <option value='En progreso'>En progreso</option>"+
-"    <option value='Cerrada'>Cerrada</option>"+
+"    <option value='Abierta'>ACTIVO</option>"+
+// "    <option value='En progreso'>En progreso</option>"+
+"    <option value='INACTIVO'>INACTIVO</option>"+
 "</select>"+
 "<div  id='NUEVA-RECTANGULO-BTN-CANCELAR' class='NUEVA-RECTANGULO-BTN-CANCELAR' >CANCELAR</div>"+
 "<div  id='NUEVA-RECTANGULO-BTN-ACEPTAR' class='NUEVA-RECTANGULO-BTN-ACEPTAR' >ACEPTAR</div>"+
 "</div>"];
 
-async function CARGAR_PANTALLA_NUEVO(){
+async function CARGAR_PANTALLA_NUEVOUSER(){
     //evento del boton "nuevo"
-    await dibujarPantallaNuevo();
-    await EVENTOS_PANTALLA_NUEVO();
+    await dibujarPantallaNuevoU();
+    await EVENTOS_PANTALLA_NUEVOU();
 }
 
-function dibujarPantallaNuevo(){
+function dibujarPantallaNuevoU(){
     dibujarMenuMS;
     const inicial = document.getElementById("ultimo").parentNode;
 
@@ -40,20 +41,20 @@ async function BORRAR_PANTALLA_NUEVO(){
     }
 }
 
-function EVENTOS_PANTALLA_NUEVO(){
+function EVENTOS_PANTALLA_NUEVOU(){
     document.getElementById("NUEVA-RECTANGULO-BTN-ACEPTAR").addEventListener("click",async function(){
-        let fecha = document.getElementById("NUEVA-INPUT-FECHA").value;
-        console.log("la fecha es->"+fecha);
+        let avatar = document.getElementById("NUEVA-TXTTAREA2-DESCRIPCION").value;
+        console.log("El avatar es->"+avatar);
 
-        let desc = document.getElementById("NUEVA-TXTTAREA-DESCRIPCION").value;
-        console.log("la descripción es->"+desc);
+        let nombre = document.getElementById("NUEVA-TXTTAREA-DESCRIPCION").value;
+        console.log("la descripción es->"+nombre);
 
-        let estado = document.getElementById("NUEVA-INPUTLIST-ESTADO").value;
-        console.log("la estado es->"+estado);
-        if(fecha == "" || desc=="" || estado==""){
+        let estadou = document.getElementById("NUEVA-INPUTLIST-ESTADO").value;
+        console.log("la estado es->"+estadou);
+        if(avatar == "" || nombre=="" || estadou==""){
             console.log("no se cargaron todos los datos");
         }else{
-            await DB_agregar_item("nuevo",fecha,desc,estado);
+            await DB_agregar_item("nuevo",avatar,nombre,estadou);
             await BORRAR_PANTALLA_NUEVO();
             let ultimoItem = listaDeSolicitudes.length;
             agregarAlista(ultimoItem,fecha,desc,estado);
