@@ -1,8 +1,6 @@
 let PANTALLA_NUEVO1 = false;
 let htmlPantallaNuevo1 = ["<div id='NUEVA-RECTANGULO-FONDO' class='NUEVA-RECTANGULO-FONDO'>"+
 "<P id='NUEVA-TXT-TITULO' class='NUEVA-TXT-TITULO'>NUEVO USUARIO</P>"+
-// "<P  id='NUEVA-TXT-FECHA' class='NUEVA-TXT-FECHA' required>FECHA:</P>"+
-// "<INPUT type='date'  id='NUEVA-INPUT-FECHA' class='NUEVA-INPUT-FECHA' > </INPUT>"+
 "<P  id='NUEVA-TXT-AVATAR' class='NUEVA-TXT-FECHA'>AVATAR:</P>"+"<textarea  id='NUEVA-TXTTAREA2-DESCRIPCION' class='NUEVA-TXTTAREA2-DESCRIPCION' cols='30' rows='9' maxlength='100'  required></textarea>"+
 "<P  id='NUEVA-TXT-DESCRIPCION' class='NUEVA-TXT-DESCRIPCION'>NOMBRE:</P>"+
 "<textarea  id='NUEVA-TXTTAREA-DESCRIPCION' class='NUEVA-TXTTAREA-DESCRIPCION' cols='30' rows='10' maxlength='100' required></textarea>"+
@@ -13,7 +11,7 @@ let htmlPantallaNuevo1 = ["<div id='NUEVA-RECTANGULO-FONDO' class='NUEVA-RECTANG
 "    <option value='INACTIVO'>INACTIVO</option>"+
 "</select>"+
 "<div  id='NUEVA-RECTANGULO-BTN-CANCELAR' class='NUEVA-RECTANGULO-BTN-CANCELAR' >CANCELAR</div>"+
-"<div  id='NUEVA-RECTANGULO-BTN-ACEPTAR' class='NUEVA-RECTANGULO-BTN-ACEPTAR' >ACEPTAR</div>"+
+"<div  id='NUEVA-RECTANGULO-BTN-ACEPTAR' class='NUEVA-RECTANGULO-BTN-ACEPTAR' >GUARDAR</div>"+
 "</div>"];
 
 async function CARGAR_PANTALLA_NUEVOUSER(){

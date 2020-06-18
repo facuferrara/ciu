@@ -220,6 +220,25 @@
         background: #FFFFFF;
         font-size: 24px;
     }
+    .BotonCrearNuevo{
+
+        position: absolute;
+        width: 160px;
+        height: 25px;
+        left: 50%;
+        margin-left: -90px;
+        top: 360px;
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 45px;
+        text-align: center;
+        text-decoration-line: underline;
+        
+        color: #FFFFFF;
+    }
     
     .ingresoDeContraseña{
         

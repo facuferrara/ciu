@@ -60,7 +60,7 @@ async function dibujarBotones(){
         await dibujarMenuMS();
     });
     document.getElementById("btnMenu3a").addEventListener("click",CARGAR_PANTALLA_MODIFICAR);
-    document.getElementById("btnMenu7a").addEventListener("click",CARGAR_PANTALLA_MODIFICAR);
+    document.getElementById("btnMenu7a").addEventListener("click",CARGAR_PANTALLA_MODIFICARUSER);
     document.getElementById("btnMenu4a").addEventListener("click",DB_borrar_seleccionados)
     document.getElementById("btnMenu5a").addEventListener("click",async function(){
         CARGAR_INDEX();
