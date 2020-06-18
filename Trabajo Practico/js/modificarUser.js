@@ -36,7 +36,7 @@ async function dibujarPantallaModificaru(){
     document.getElementById("NUEVA-TXTTAREA-DESCRIPCION").value = nombre;
     document.getElementById("NUEVA-INPUTLIST-ESTADO").value = estadou;
 
-    document.getElementById("NUEVA-RECTANGULO-BTN-CANCELAR").addEventListener("click",BORRAR_PANTALLA_MODIFICAR);
+    document.getElementById("NUEVA-RECTANGULO-BTN-CANCELAR").addEventListener("click",BORRAR_PANTALLA_MODIFICARU);
     document.getElementById("NUEVA-TXT-FECHA").addEventListener("click",function(){
         console.log("se cambio EL AVATAR A -> "+document.getElementById("NUEVA-INPUT-FECHA").value);
     });
