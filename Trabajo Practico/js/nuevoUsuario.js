@@ -1,7 +1,18 @@
 let PANTALLA_NUEVO1 = false;
+let nuevo_avatar_id = 0;
+let imgAvatar="https://gravatar.com/avatar/ab3ef817e400dbddf665041ca1a55051?s=100&d=mp&r=x";
 let htmlPantallaNuevo1 = ["<div id='NUEVA-RECTANGULO-FONDO' class='NUEVA-RECTANGULO-FONDO'>"+
 "<P id='NUEVA-TXT-TITULO' class='NUEVA-TXT-TITULO'>NUEVO USUARIO</P>"+
-"<P  id='NUEVA-TXT-AVATAR' class='NUEVA-TXT-FECHA'>AVATAR:</P>"+"<textarea  id='NUEVA-TXTTAREA2-DESCRIPCION' class='NUEVA-TXTTAREA2-DESCRIPCION' cols='30' rows='9' maxlength='100'  required></textarea>"+
+"<P  id='NUEVA-TXT-AVATAR' class='NUEVA-TXT-FECHA'><img id='imgAvatar' src='https://gravatar.com/avatar/ab3ef817e400dbddf665041ca1a55051?s=100&d=mp&r=x'>"+
+// "<table id='uNtabla' class='uNtabla'>"+
+// "<tr>"+
+// "<td colspan='2' id='uNavatar' class='uNavatar'><img id='imgAvatar' src='https://gravatar.com/avatar/ab3ef817e400dbddf665041ca1a55051?s=100&d=mp&r=x'>"+
+// "</td>"+
+// "</tr>"+
+// "<tr>"+
+// "<td id='uNavatarAnterior' class='uNavatarAnterior'></td>"+
+// "<td id='uNavatarSiguiente' class='uNavatarSiguiente'></td>"+
+// +
 "<P  id='NUEVA-TXT-DESCRIPCION' class='NUEVA-TXT-DESCRIPCION'>NOMBRE:</P>"+
 "<textarea  id='NUEVA-TXTTAREA-DESCRIPCION' class='NUEVA-TXTTAREA-DESCRIPCION' cols='30' rows='10' maxlength='100' required></textarea>"+
 "<p  id='NUEVA-TXT-ESTADO' class='NUEVA-TXT-ESTADO'>ESTADO:</p>"+
@@ -38,7 +49,10 @@ async function BORRAR_PANTALLA_NUEVO(){
         console.log("no se puedo borrar la pantalla de 'NUEVO'");
     }
 }
-
+// function agregarAvatar(){
+//     let urlAvatar = DB_urlsAvatar[Unuevo_avatar_id%DB_urlsAvatar.length];
+//     document.getElementById("imgAvatar").src = urlAvatar;
+// }
 function EVENTOS_PANTALLA_NUEVOU(){
     document.getElementById("NUEVA-RECTANGULO-BTN-ACEPTAR").addEventListener("click",async function(){
         let avatar = document.getElementById("NUEVA-TXTTAREA2-DESCRIPCION").value;
@@ -62,4 +76,3 @@ function EVENTOS_PANTALLA_NUEVOU(){
     });
     document.getElementById("NUEVA-RECTANGULO-BTN-CANCELAR").addEventListener("click",BORRAR_PANTALLA_NUEVO);
 }
-

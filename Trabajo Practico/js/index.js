@@ -1,4 +1,3 @@
-
 async function CARGAR_INDEX(){
     await document.getElementById("rectangulo-Bienvenida").insertAdjacentHTML("beforeEnd",""+
     "<div id='contenedor-parrafo-bienvenida' class='contenedor-parrafo-bienvenida'>"+
@@ -22,7 +21,15 @@ async function CARGAR_INDEX(){
         document.getElementById("elementoMenu0").addEventListener("click",async function(){
             await removerAgregados("elementoMenu0",elementosAagregar);
         })
+    const botonCrearNuevo = document.getElementById("BotonCrearNuevo");
+    botonCrearNuevo.addEventListener("click", async function(){
+        await agregarAlFinal("ultimo","elementoMenu0",elementosAagregar);
+        document.getElementById("elementoMenu0").addEventListener("click",async function(){
+            await removerAgregados("elementoMenu0",elementosAagregar);
+        })
     })
+    })
+
     // TABLA_borrar_items_todos();
     
     document.getElementById("tabla").remove();

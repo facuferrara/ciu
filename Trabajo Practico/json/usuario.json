@@ -2,9 +2,9 @@
   "Usuarios": [
       {
  
-          "Avatar": "../img/gravatar.png",
-          "Nombre": "Ricardo",
-          "EstadoU": "activo"
+          "Avatar": "https://gravatar.com/avatar/eb1e0a45a4c29acd4567748e432df5a8?s=100&d=robohash&r=x",
+          "Nombre": "Facundo",
+          "EstadoU": "Activo"
           
       }
       

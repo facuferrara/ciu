@@ -1,7 +1,6 @@
 // import saludar from ("./index.js");
 // falta ver si validar usuario concreto
 const botonLogear = document.getElementById("BotonLogear");
-const botonCrearNuevo = document.getElementById("BotonCrearNuevo");
 // const usuariosLogin = [
 //     ['30337591','dario83']
 // ];
@@ -23,19 +22,13 @@ let elementosAagregar = [
 ];
 
 
-
 botonLogear.addEventListener("click",async function(){
     await agregarAlFinal("ultimo","elementoMenu0",elementosAagregar);
     document.getElementById("elementoMenu0").addEventListener("click",async function(){
         await removerAgregados("elementoMenu0",elementosAagregar);
     })
 })
-botonCrearNuevo.addEventListener("click", async function(){
-    await agregarAlFinal("ultimo","elementoMenu0",elementosAagregar);
-    document.getElementById("elementoMenu0").addEventListener("click",async function(){
-        await removerAgregados("elementoMenu0",elementosAagregar);
-    })
-})
+
 async function agregarAlFinal(itemAnterior,itemEventoSalir, items){
     items.forEach(function(item){
         document.body.lastElementChild.insertAdjacentHTML("afterend",item);

@@ -9,6 +9,14 @@
   background: linear-gradient(180deg, rgba(92, 183, 96, 1) 0%, rgba(203, 29, 196, 1) 100%);
   
 }
+.NUEVA-TXT-AVATAR{
+  top: 0px;
+  /* margin-top: auto; */
+  left: 0px;
+  width: 100px;
+  height: 100px;
+}
+
 .NUEVA-TXT-TITULO1{
   position: absolute;
   width: 326px;

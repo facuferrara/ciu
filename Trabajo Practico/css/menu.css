@@ -1,5 +1,5 @@
 
-.botonMenu{
+.botonMenu, .botonNuevo, .botonNuevoUser, .botonModificar, .botonSalir, .botonModificarUser, .botonEliminar {
     position: absolute;
     width: 100px;
     height: 39px;
@@ -17,11 +17,13 @@
     line-height: 28px;
     text-align: center;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 
+
 .botonNuevo{
-    position: absolute;
+    /* position: absolute; */
     width: 15%;
     height: 40px;
     left: 255px;
